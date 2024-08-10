@@ -1,0 +1,21 @@
+.header {
+  padding: 25px;
+  background-color: rosybrown;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.navList {
+  display: flex;
+  gap: 10px;
+}
+
+.link {
+  color: rgb(61, 23, 4);
+  text-decoration: none;
+}
+
+.active {
+  color: white;
+  text-decoration: underline;
+}
