@@ -1,15 +1,22 @@
 import axios from "axios";
 
-const url = 'https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1';
+axios.defaults.baseURL = "https://api.themoviedb.org/3";
+axios.defaults.headers.common["Authorization"] =
+  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YjJkNjQ3NjI2MjRkNzg2MjQ3MzY2Mjg0ODFiYTBjNiIsIm5iZiI6MTcyNDY3ODMwNC41MTg0ODQsInN1YiI6IjY2YjYzMmExZDgxODMxZjQ1MmU1ZDRjNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aeTV1UZhtjq09VCsih4cYk53W1Rg9ijkNZVsqPMDf4I";
 
-const options = {
-    headers: {
-        Authorization: 'Bearer api_read_access_token'
-    }
-}
+// const options = {
+//   headers: {
+//     Authorization:
+//       ,
+//   },
+// };
 
-const fetchMovies = async (query) => {
-    const response = await axios.get(url, options), { 
+export const fetchMovies = async () => {
+  const response = await axios.get("/trending/movie/day");
+  return response.data.results;
+};
 
-    }
-}
+export const getDetails = async (movieId) => {
+  const response = await axios.get(`/movie/${movieId}`);
+  return response.data;
+};

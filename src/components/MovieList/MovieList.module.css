@@ -1,0 +1,25 @@
+/* .list {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+} */
+
+/* .item {
+  width: 100%;
+} */
+
+/* .wrapper {
+  margin: 0 auto;
+} */
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  width: calc((100% - 20px) / 3);
+}
