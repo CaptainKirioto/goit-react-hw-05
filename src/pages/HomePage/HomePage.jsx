@@ -13,6 +13,7 @@ const HomePage = () => {
   useEffect(() => {
     async function getData() {
       try {
+        setError(false);
         setLoader(true);
         const data = await fetchMovies();
         setMovies(data);
@@ -27,12 +28,12 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
-      <p className={s.text}>Trending movies</p>
+    <div className={s.wrapper}>
+      <h1 className={s.text}>Trending movies</h1>
       {error && <ErrorMessage />}
       {loader && <Loader />}
       <MovieList movies={movies} />
-    </>
+    </div>
   );
 };
 

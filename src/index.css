@@ -4,6 +4,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  /* background: linear-gradient(to right, rgb(133, 84, 81), rgb(186, 161, 160)); */
+  background: linear-gradient(to right, rgb(74, 54, 53), rgb(186, 163, 162));
 }
 
 h1,
