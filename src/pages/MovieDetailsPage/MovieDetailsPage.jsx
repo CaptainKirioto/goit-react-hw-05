@@ -35,20 +35,18 @@ const MovieDetailsPage = () => {
     getData();
   }, [movieId]);
 
-  console.log(details);
-
   return (
     <div>
       {/* <p>Movie Details Page: ID {movieId} </p> */}
-      <Details details={details} />
       {error && <ErrorMessage />}
       {loader && <Loader />}
+      <Details details={details} />
       <ul className={s.nav}>
-        <linavLink>
+        <li>
           <NavLink className={buildLinkClass} to="cast">
             Cast
           </NavLink>
-        </linavLink>
+        </li>
         <li>
           <NavLink className={buildLinkClass} to="reviews">
             Reviews

@@ -20,7 +20,6 @@ const MoviesPage = () => {
         setError(false);
         setLoader(true);
         const data = await searchMovies(query);
-        console.log(data);
         setMovies(data);
       } catch (error) {
         setError(true);
@@ -31,9 +30,6 @@ const MoviesPage = () => {
     };
     getData();
   }, [query]);
-
-  console.log(movies);
-
   return (
     <div>
       <SearchBar />
