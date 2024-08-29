@@ -1,0 +1,68 @@
+.wrapper {
+  background-color: rgb(191, 182, 182);
+  max-width: 1400px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.castList {
+  border-radius: 5px;
+  padding: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 auto;
+}
+
+.item {
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.info {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.img,
+.noImg {
+  width: 100%;
+  max-width: 160px;
+
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.noImg {
+  height: 242px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 200px; */
+  /* font-weight: bold; */
+  font-size: 1.5em;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.role {
+  font-style: italic;
+}

@@ -1,7 +1,7 @@
 import s from "./Details.module.css";
 
 const Details = ({ details }) => {
-  const imgURL = "https://image.tmdb.org/t/p/w500/";
+  const imgURL = "https://image.tmdb.org/t/p/w300/";
   const genres = details.genres?.map((genre) => genre.name).join(", ");
   const validPoster = details.poster_path && details.poster_path !== null;
 

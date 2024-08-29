@@ -1,0 +1,22 @@
+.wrapper {
+  max-width: 1400px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.item {
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: rgb(166, 157, 157);
+  border: 1px solid white;
+
+  border-radius: 5px;
+}
+
+.author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}

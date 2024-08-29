@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Outlet, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { getDetails } from "../../services/api";
 import Loader from "../../components/Loader/Loader";
@@ -13,6 +13,9 @@ const MovieDetailsPage = () => {
   const [details, setDetails] = useState([]);
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState(false);
+
+  const location = useLocation();
+  const backLinkRef = useRef(location.state ?? "/movies");
 
   const buildLinkClass = ({ isActive }) => {
     return clsx(s.link, isActive && s.active);
@@ -38,6 +41,10 @@ const MovieDetailsPage = () => {
   return (
     <div>
       {/* <p>Movie Details Page: ID {movieId} </p> */}
+
+      <Link to={backLinkRef.current} className={s.goBack}>
+        Go back
+      </Link>
       {error && <ErrorMessage />}
       {loader && <Loader />}
       <Details details={details} />

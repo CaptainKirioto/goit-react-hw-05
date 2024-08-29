@@ -1,7 +1,10 @@
 .wrapper {
+  /* width: 1220px; */
+  max-width: 1220px;
+  margin: 0 auto 15px auto;
   display: flex;
   gap: 15px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   border: 1px solid rgb(190, 174, 174);
   border-radius: 5px;
   padding: 15px;
@@ -13,11 +16,13 @@
 .noPoster {
   border: 1px solid rgb(61, 23, 4);
   border-radius: 5px;
-  height: 400px;
-  width: 268px;
+  height: 450px;
+  /* width: 268px; */
 }
 
 .noPoster {
+  height: 400px;
+  width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
