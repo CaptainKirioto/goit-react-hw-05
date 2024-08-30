@@ -1,5 +1,11 @@
 .app {
-  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  padding: 15px;
+  /* display: flex;
+  flex-direction: column; */
+
   /* text-align: center; */
   margin: 0 auto;
+  flex: 1;
 }

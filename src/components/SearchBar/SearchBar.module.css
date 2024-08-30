@@ -5,28 +5,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
-  margin: 0 auto 20px auto;
-  background: linear-gradient(to right, rgb(186, 164, 164), rgb(161, 139, 138));
+  /* max-width: 1400px; */
+  /* width: 100%; */
+  margin: 0 auto 30px auto;
+  /* background: linear-gradient(to right, rgb(186, 164, 164), rgb(161, 139, 138)); */
+  background-color: rgb(61, 23, 4);
 }
 
 .text {
-  color: rgb(61, 23, 4);
+  /* color: rgb(61, 23, 4); */
+  color: white;
   margin-bottom: 15px;
 }
 
 .input,
 .button {
-  padding: 8px;
-  border-radius: 5px;
+  padding: 15px;
+  /* border-top-left-radius: 15px; */
 }
 
 .input {
-  margin-right: 5px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
   border: 1px solid rgb(61, 23, 4);
   outline: none;
+  width: 300px;
+  background-color: rgb(242, 239, 230);
 }
 
 .button {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
   border: 1px solid rgb(61, 23, 4);
+  background-color: rgb(220, 213, 194);
 }

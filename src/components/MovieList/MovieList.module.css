@@ -17,9 +17,11 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
+  margin: 0 auto 60px auto;
+  padding-bottom: 60px;
 }
 
-.item {
+/* .item {
   width: calc((100% - 20px) / 3);
-}
+} */

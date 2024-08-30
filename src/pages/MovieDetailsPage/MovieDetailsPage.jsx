@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { getDetails } from "../../services/api";
@@ -39,9 +39,7 @@ const MovieDetailsPage = () => {
   }, [movieId]);
 
   return (
-    <div>
-      {/* <p>Movie Details Page: ID {movieId} </p> */}
-
+    <div className={s.wrapper}>
       <Link to={backLinkRef.current} className={s.goBack}>
         Go back
       </Link>
@@ -60,7 +58,9 @@ const MovieDetailsPage = () => {
           </NavLink>
         </li>
       </ul>
-      <Outlet />
+      <Suspense>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

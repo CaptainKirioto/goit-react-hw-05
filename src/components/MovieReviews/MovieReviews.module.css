@@ -3,17 +3,18 @@
   width: 100%;
   border-radius: 5px;
   padding: 15px;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;
   box-sizing: border-box;
 }
 
 .item {
   margin-bottom: 25px;
   padding: 20px;
-  background-color: rgb(166, 157, 157);
-  border: 1px solid white;
-
-  border-radius: 5px;
+  /* background-color: rgb(223, 220, 211); */
+  /* border-radius: 5px; */
+  border-top: 6px solid rgb(61, 23, 4);
+  /* border-bottom: 6px solid rgb(61, 23, 4); */
+  /* color: rgb(242, 239, 230); */
 }
 
 .author {

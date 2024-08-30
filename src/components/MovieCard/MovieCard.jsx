@@ -6,7 +6,6 @@ const MovieCard = ({ movie }) => {
   const imgURL = "https://image.tmdb.org/t/p/w500/";
 
   const location = useLocation();
-  console.log(location);
 
   return (
     <div>

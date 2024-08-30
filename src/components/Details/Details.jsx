@@ -19,17 +19,24 @@ const Details = ({ details }) => {
       <div className={s.detailsWrap}>
         <h3>{details.title}</h3>
         <p>
-          <span className={s.span}>Origin Country:</span>{" "}
-          {details.origin_country}
+          <span className={s.span}>Vote: </span>
+          {details.vote_average || "No info"} (Voters: {details.vote_count})
         </p>
         <p>
-          <span className={s.span}>Release date:</span> {details.release_date}
+          <span className={s.span}>Origin Country: </span>
+          {details.origin_country || "No info"}
         </p>
         <p>
-          <span className={s.span}>Overview:</span> {details.overview}
+          <span className={s.span}>Release date: </span>
+          {details.release_date || "No info"}
         </p>
         <p>
-          <span className={s.span}>Overview:</span> {genres}
+          <span className={s.span}>Overview: </span>
+          {details.overview || "No info"}
+        </p>
+
+        <p>
+          <span className={s.span}>Genres: </span> {genres || "No info"}
         </p>
       </div>
     </div>

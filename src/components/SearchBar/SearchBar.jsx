@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import s from "./SearchBar.module.css";
 
 const SearchBar = () => {
@@ -8,12 +9,21 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!query.trim()) return;
+
+    if (!query.trim()) {
+      toast.error("Please enter something!");
+      return;
+    }
+
     setSearchParams({ query });
   };
 
-  const handleChange = (e) => {
-    setQuery(e.target.value);
+  // const handleChange = (e) => {
+  //   setQuery(e.target.value);
+  // };
+
+  const handleChange = ({ target: { value } }) => {
+    setQuery(value);
   };
 
   return (
